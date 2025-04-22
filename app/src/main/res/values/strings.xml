@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Score Stack</string>
+    <string name="score_stack">Score Stack</string>
+    <string name="new_game">New Game</string>
+</resources>
