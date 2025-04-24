@@ -22,31 +22,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
-    <ImageButton
-        android:id="@+id/newGameButton"
-        android:layout_width="383dp"
-        android:layout_height="80dp"
-        android:background="@color/light_red"
-        android:contentDescription="@string/new_game"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.558"
-        app:srcCompat="@drawable/blue_button" />
-
-    <TextView
-        android:id="@+id/newGameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/new_game"
-        android:textColor="@color/dark_gray"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/newGameButton"
-        app:layout_constraintEnd_toEndOf="@+id/newGameButton"
-        app:layout_constraintStart_toStartOf="@+id/newGameButton"
-        app:layout_constraintTop_toTopOf="@+id/newGameButton" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,571 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_red">
+    android:background="@color/light_red"
+    android:visibility="visible">
 
+    <ImageButton
+        android:id="@+id/dice3"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background=""
+        android:contentDescription="@string/dice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice1"
+        app:srcCompat="@drawable/blank_dice" />
+
+    <ImageButton
+        android:id="@+id/dice1"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="368dp"
+        android:background=""
+        android:contentDescription="@string/dice"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blank_dice" />
+
+    <ImageButton
+        android:id="@+id/dice2"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="368dp"
+        android:background=""
+        android:contentDescription="@string/dice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintStart_toEndOf="@+id/dice1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blank_dice" />
+
+    <ImageButton
+        android:id="@+id/dice5"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="28dp"
+        android:background=""
+        android:contentDescription="@string/dice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/dice4"
+        app:layout_constraintTop_toBottomOf="@+id/dice2"
+        app:srcCompat="@drawable/blank_dice" />
+
+    <ImageButton
+        android:id="@+id/dice4"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:background=""
+        android:contentDescription="@string/dice"
+        app:layout_constraintStart_toEndOf="@+id/dice3"
+        app:layout_constraintTop_toBottomOf="@+id/dice1"
+        app:srcCompat="@drawable/blank_dice" />
+
+    <ImageButton
+        android:id="@+id/rollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:background="@color/light_red"
+        android:contentDescription="@string/roll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toEndOf="@+id/endTurnButton"
+        app:srcCompat="@drawable/roll" />
+
+    <TextView
+        android:id="@+id/rollText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/roll"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rollButton"
+        app:layout_constraintEnd_toEndOf="@+id/rollButton"
+        app:layout_constraintStart_toStartOf="@+id/rollButton"
+        app:layout_constraintTop_toTopOf="@+id/rollButton" />
+
+    <ImageButton
+        android:id="@+id/endTurnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="120dp"
+        android:background="@color/light_red"
+        android:contentDescription="@string/end_turn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/end_turn" />
+
+    <TextView
+        android:id="@+id/endTurnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/end_turn"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/endTurnButton"
+        app:layout_constraintEnd_toEndOf="@+id/endTurnButton"
+        app:layout_constraintStart_toStartOf="@+id/endTurnButton"
+        app:layout_constraintTop_toTopOf="@+id/endTurnButton" />
+
+    <ImageView
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/dice2"
+        app:layout_constraintStart_toEndOf="@+id/checkbox1"
+        app:srcCompat="@drawable/yellow_no_check" />
+
+    <ImageView
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/checkbox"
+        app:layout_constraintBottom_toTopOf="@+id/dice1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/yellow_no_check" />
+
+    <ImageView
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/checkbox"
+        app:layout_constraintBottom_toTopOf="@+id/dice2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/checkbox2"
+        app:srcCompat="@drawable/yellow_no_check" />
+
+    <ImageView
+        android:id="@+id/score_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/checkbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/score_large" />
+
+    <TextView
+        android:id="@+id/toak_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
+        app:layout_constraintTop_toTopOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/fiveoak_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
+        app:layout_constraintTop_toBottomOf="@+id/ls_score" />
+
+    <TextView
+        android:id="@+id/ls_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
+        app:layout_constraintTop_toBottomOf="@+id/ss_score" />
+
+    <TextView
+        android:id="@+id/ss_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
+        app:layout_constraintTop_toBottomOf="@+id/fh_score" />
+
+    <TextView
+        android:id="@+id/fh_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
+        app:layout_constraintTop_toBottomOf="@+id/foak_score" />
+
+    <TextView
+        android:id="@+id/foak_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
+        app:layout_constraintTop_toBottomOf="@+id/toak_score" />
+
+    <TextView
+        android:id="@+id/add_toak_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/toak_score"
+        app:layout_constraintTop_toTopOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/add_fiveoak_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/fiveoak_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_ls_score" />
+
+    <TextView
+        android:id="@+id/add_ls_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/ls_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_ss_score" />
+
+    <TextView
+        android:id="@+id/add_ss_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/ss_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_fh_score" />
+
+    <TextView
+        android:id="@+id/add_fh_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/fh_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_foak_score" />
+
+    <TextView
+        android:id="@+id/add_foak_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/foak_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_toak_score" />
+
+    <TextView
+        android:id="@+id/score_left"
+        android:layout_width="86dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/score_left"
+        android:textAlignment="textStart"
+        android:textColor="@color/light_gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/score_card"
+        app:layout_constraintTop_toTopOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/score_equals_left"
+        android:layout_width="20dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/score_equals"
+        android:textAlignment="textStart"
+        android:textColor="@color/light_gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/score_left"
+        app:layout_constraintTop_toTopOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/score_right"
+        android:layout_width="151dp"
+        android:layout_height="184dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="14dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/score_right"
+        android:textAlignment="textStart"
+        android:textColor="@color/light_gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
+        app:layout_constraintTop_toTopOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/score_equals_right"
+        android:layout_width="20dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="16dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/score_equals"
+        android:textAlignment="textStart"
+        android:textColor="@color/light_gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_right"
+        app:layout_constraintTop_toTopOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/aces_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
+        app:layout_constraintTop_toTopOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/twos_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
+        app:layout_constraintTop_toBottomOf="@+id/aces_score" />
+
+    <TextView
+        android:id="@+id/threes_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
+        app:layout_constraintTop_toBottomOf="@+id/twos_score" />
+
+    <TextView
+        android:id="@+id/fours_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
+        app:layout_constraintTop_toBottomOf="@+id/threes_score" />
+
+    <TextView
+        android:id="@+id/fives_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
+        app:layout_constraintTop_toBottomOf="@+id/fours_score" />
+
+    <TextView
+        android:id="@+id/sixes_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
+        app:layout_constraintTop_toBottomOf="@+id/fives_score" />
+
+    <TextView
+        android:id="@+id/add_aces_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/aces_score"
+        app:layout_constraintTop_toTopOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/add_twos_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/twos_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_aces_score" />
+
+    <TextView
+        android:id="@+id/add_threes_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/threes_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_twos_score" />
+
+    <TextView
+        android:id="@+id/add_fours_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/fours_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_threes_score" />
+
+    <TextView
+        android:id="@+id/add_fives_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/fives_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_fours_score" />
+
+    <TextView
+        android:id="@+id/add_sixes_score"
+        android:layout_width="21dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/sixes_score"
+        app:layout_constraintTop_toBottomOf="@+id/add_fives_score" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

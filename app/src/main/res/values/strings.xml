@@ -2,4 +2,52 @@
     <string name="app_name">Score Stack</string>
     <string name="score_stack">Score Stack</string>
     <string name="new_game">New Game</string>
+    <string name="end_turn">End Turn</string>
+    <string name="roll">Roll</string>
+    <string name="dice">Dice</string>
+    <string name="checkbox">Checkbox</string>
+    <string name="score_left">
+         Aces
+        <br />
+         Twos
+        <br />
+         Threes
+        <br />
+         Fours
+        <br />
+         Fives
+        <br />
+         Sixes
+    </string>
+    <string name="score_right">
+        Three of a Kind
+        <br />
+        Four of a Kind
+        <br />
+        Full House
+        <br />
+        Small Straight
+        <br />
+        Large Straight
+        <br />
+        Five of a Kind
+    </string>
+    <string name="score_equals">
+        =
+        <br />
+        =
+        <br />
+        =
+        <br />
+        =
+        <br />
+        =
+        <br />
+        =
+    </string>
+    <string name="dash">-</string>
+    <string name="final_results">Final Results</string>
+    <string name="high_score">High Score</string>
+
+
 </resources>
