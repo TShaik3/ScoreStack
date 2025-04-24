@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loading);
 
-        newGame = findViewById(R.id.newGameButton);
+        //newGame = findViewById(R.id.nextTurnButton);
 
     }
 }

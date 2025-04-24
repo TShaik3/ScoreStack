@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/light_red">
 
-
     <ImageView
         android:id="@+id/highScoreBack"
         android:layout_width="wrap_content"
@@ -19,7 +18,7 @@
         app:srcCompat="@drawable/high_score" />
 
     <ImageButton
-        android:id="@+id/newGameButton"
+        android:id="@+id/nextTurnButton"
         android:layout_width="383dp"
         android:layout_height="80dp"
         android:background=""
@@ -40,10 +39,10 @@
         android:text="@string/new_game"
         android:textColor="@color/dark_gray"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/newGameButton"
-        app:layout_constraintEnd_toEndOf="@+id/newGameButton"
-        app:layout_constraintStart_toStartOf="@+id/newGameButton"
-        app:layout_constraintTop_toTopOf="@+id/newGameButton" />
+        app:layout_constraintBottom_toBottomOf="@+id/nextTurnButton"
+        app:layout_constraintEnd_toEndOf="@+id/nextTurnButton"
+        app:layout_constraintStart_toStartOf="@+id/nextTurnButton"
+        app:layout_constraintTop_toTopOf="@+id/nextTurnButton" />
 
     <TextView
         android:id="@+id/high_score"
@@ -58,4 +57,83 @@
         app:layout_constraintEnd_toEndOf="@+id/highScoreBack"
         app:layout_constraintStart_toStartOf="@+id/highScoreBack"
         app:layout_constraintTop_toTopOf="@+id/highScoreBack" />
+
+    <TextView
+        android:id="@+id/highScoreText"
+        android:layout_width="188dp"
+        android:layout_height="464dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="242dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="100sp"
+        android:textColor="@color/light_gray"
+        android:textSize="30sp"
+        android:text="@string/high_score_text"
+        app:layout_constraintBottom_toBottomOf="@+id/highScoreBack"
+        app:layout_constraintEnd_toEndOf="@+id/highScoreBack"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="@+id/highScoreBack"
+        app:layout_constraintTop_toBottomOf="@+id/high_score"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/totalScore"
+        android:layout_width="89dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="18dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="100sp"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/light_gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/highScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/high_score" />
+
+    <TextView
+        android:id="@+id/dailyHS"
+        android:layout_width="89dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="84dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="100sp"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/light_gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/highScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/totalScore" />
+
+    <TextView
+        android:id="@+id/weeklyHS"
+        android:layout_width="89dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="84dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="100sp"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/light_gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/highScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/dailyHS" />
+
+    <TextView
+        android:id="@+id/allTimeHS"
+        android:layout_width="89dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="96dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:lineSpacingExtra="100sp"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/light_gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/highScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/weeklyHS" />
 </androidx.constraintlayout.widget.ConstraintLayout>

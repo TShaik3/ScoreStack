@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.291" />
 
     <ImageButton
-        android:id="@+id/newGameButton"
+        android:id="@+id/nextTurnButton"
         android:layout_width="383dp"
         android:layout_height="80dp"
         android:background=""
@@ -46,9 +46,9 @@
         android:text="@string/new_game"
         android:textColor="@color/dark_gray"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/newGameButton"
-        app:layout_constraintEnd_toEndOf="@+id/newGameButton"
-        app:layout_constraintStart_toStartOf="@+id/newGameButton"
-        app:layout_constraintTop_toTopOf="@+id/newGameButton" />
+        app:layout_constraintBottom_toBottomOf="@+id/nextTurnButton"
+        app:layout_constraintEnd_toEndOf="@+id/nextTurnButton"
+        app:layout_constraintStart_toStartOf="@+id/nextTurnButton"
+        app:layout_constraintTop_toTopOf="@+id/nextTurnButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

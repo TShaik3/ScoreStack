@@ -125,11 +125,11 @@
         app:layout_constraintTop_toBottomOf="@+id/score_equals_top" />
 
     <ImageButton
-        android:id="@+id/newGameButton"
+        android:id="@+id/nextTurnButton"
         android:layout_width="383dp"
         android:layout_height="80dp"
         android:background=""
-        android:contentDescription="@string/new_game"
+        android:contentDescription="@string/next_turn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,27 +138,27 @@
         app:srcCompat="@drawable/blue_button" />
 
     <TextView
-        android:id="@+id/newGameText"
+        android:id="@+id/nextTurnText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
-        android:text="@string/new_game"
+        android:text="@string/next_turn"
         android:textColor="@color/dark_gray"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/newGameButton"
-        app:layout_constraintEnd_toEndOf="@+id/newGameButton"
-        app:layout_constraintStart_toStartOf="@+id/newGameButton"
-        app:layout_constraintTop_toTopOf="@+id/newGameButton" />
+        app:layout_constraintBottom_toBottomOf="@+id/nextTurnButton"
+        app:layout_constraintEnd_toEndOf="@+id/nextTurnButton"
+        app:layout_constraintStart_toStartOf="@+id/nextTurnButton"
+        app:layout_constraintTop_toTopOf="@+id/nextTurnButton" />
 
     <TextView
-        android:id="@+id/final_results"
+        android:id="@+id/results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
-        android:text="@string/final_results"
+        android:text="@string/results"
         android:textColor="@color/light_gray"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
@@ -178,7 +178,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/score_equals_top"
-        app:layout_constraintTop_toBottomOf="@+id/final_results" />
+        app:layout_constraintTop_toBottomOf="@+id/results" />
 
     <TextView
         android:id="@+id/twos_score"
@@ -330,5 +330,181 @@
         app:layout_constraintStart_toEndOf="@+id/score_equals_bottom"
         app:layout_constraintTop_toBottomOf="@+id/fh_score" />
 
+    <TextView
+        android:id="@+id/selectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/select_a_category"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/nextTurnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finalResultBack"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <Button
+        android:id="@+id/acesButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/results" />
+
+    <Button
+        android:id="@+id/twosButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/acesButton" />
+
+    <Button
+        android:id="@+id/threesButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/twosButton" />
+
+    <Button
+        android:id="@+id/foursButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/threesButton" />
+
+    <Button
+        android:id="@+id/fivesButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/foursButton" />
+
+    <Button
+        android:id="@+id/sixesButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/fivesButton" />
+
+    <Button
+        android:id="@+id/bonusButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/sixesButton" />
+
+    <Button
+        android:id="@+id/threeOfAKindButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/bonusButton" />
+
+    <Button
+        android:id="@+id/fourOfAKindButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/threeOfAKindButton" />
+
+    <Button
+        android:id="@+id/fullHouseButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/threeOfAKindButton" />
+
+    <Button
+        android:id="@+id/smallStraightButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/fullHouseButton" />
+
+    <Button
+        android:id="@+id/largeStraightButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/smallStraightButton" />
+
+    <Button
+        android:id="@+id/fiveOfAKindButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/largeStraightButton" />
+
+    <Button
+        android:id="@+id/chanceButton"
+        android:layout_width="306dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/hidden"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/fiveOfAKindButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
