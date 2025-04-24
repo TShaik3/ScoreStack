@@ -18,6 +18,8 @@
          Fives
         <br />
          Sixes
+        <br />
+         Bonus
     </string>
     <string name="score_right">
         Three of a Kind
@@ -31,8 +33,12 @@
         Large Straight
         <br />
         Five of a Kind
+        <br />
+        Chance (Total)
     </string>
     <string name="score_equals">
+        =
+        <br />
         =
         <br />
         =
