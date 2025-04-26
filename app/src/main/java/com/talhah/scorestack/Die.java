@@ -9,15 +9,19 @@ public class Die {
     private final int sides;
     protected int totalRolls;
     private Boolean isHeld;
+    private int currentSide;
     public Die() {
         this.sides = 6;
         this.id = count++;
         this.totalRolls = 0;
         this.isHeld = false;
+        this.currentSide = 1;
     }
     public Die(int n) {
         this.sides = n;
         id= count++;
+        this.isHeld = false;
+        this.currentSide = 1;
     }
     public int getSides() {
         return this.sides;
@@ -28,18 +32,19 @@ public class Die {
     public int getTotalRolls(){
         return this.totalRolls;
     }
-
     public Boolean getHeld() {
         return this.isHeld;
     }
+    public int getCurrentSide() { return this.currentSide; }
     public int roll() {
         if (!isHeld) {
             totalRolls++;
             Random rand = null;
             int min = 1;
             int max = this.sides;
-            int randomNum = this.rand.nextInt((max - min) + 1) + min;
-            return randomNum;
+            currentSide = this.rand.nextInt((max - min) + 1) + min;
+            return currentSide;
         }
+        return currentSide;
     }
 }
