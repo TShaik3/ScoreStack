@@ -66,6 +66,9 @@
     <string name="results">Results</string>
     <string name="next_turn">Next Turn</string>
     <string name="select_a_category">Select a Category</string>
-
+    <string name="twenty_five">25</string>
+    <string name="thirty">30</string>
+    <string name="forty">40</string>
+    <string name="fifty">50</string>
 
 </resources>

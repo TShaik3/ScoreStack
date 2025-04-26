@@ -13,7 +13,7 @@
         android:layout_height="107dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:background=""
+        android:background="@color/light_red"
         android:contentDescription="@string/dice"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dice1"
@@ -25,7 +25,7 @@
         android:layout_height="107dp"
         android:layout_marginStart="76dp"
         android:layout_marginTop="370dp"
-        android:background=""
+        android:background="@color/light_red"
         android:contentDescription="@string/dice"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         android:layout_width="105dp"
         android:layout_height="107dp"
         android:layout_marginTop="370dp"
-        android:background=""
+        android:background="@color/light_red"
         android:contentDescription="@string/dice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.336"
@@ -49,8 +49,8 @@
         android:id="@+id/dice5"
         android:layout_width="105dp"
         android:layout_height="107dp"
-        android:layout_marginTop="25dp"
-        android:background=""
+        android:layout_marginTop="24dp"
+        android:background="@color/light_red"
         android:contentDescription="@string/dice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
@@ -64,7 +64,7 @@
         android:layout_height="107dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="25dp"
-        android:background=""
+        android:background="@color/light_red"
         android:contentDescription="@string/dice"
         app:layout_constraintStart_toEndOf="@+id/dice3"
         app:layout_constraintTop_toBottomOf="@+id/dice1"
@@ -270,7 +270,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toak_score" />
 
     <TextView
-        android:id="@+id/add_toak_score"
+        android:id="@+id/add_three_of_a_kind_score"
         android:layout_width="21dp"
         android:layout_height="26dp"
         android:layout_marginTop="15dp"
@@ -295,10 +295,10 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/change_score"
-        app:layout_constraintTop_toBottomOf="@+id/add_ls_score" />
+        app:layout_constraintTop_toBottomOf="@+id/add_large_straight_score" />
 
     <TextView
-        android:id="@+id/add_fiveoak_score2"
+        android:id="@+id/add_five_of_a_kind_score"
         android:layout_width="21dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
@@ -309,7 +309,7 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/fiveoak_score2"
-        app:layout_constraintTop_toBottomOf="@+id/add_ls_score" />
+        app:layout_constraintTop_toBottomOf="@+id/add_large_straight_score" />
 
     <TextView
         android:id="@+id/add_chance_score"
@@ -326,7 +326,7 @@
         app:layout_constraintTop_toBottomOf="@+id/add_fiveoak_score" />
 
     <TextView
-        android:id="@+id/add_ls_score"
+        android:id="@+id/add_large_straight_score"
         android:layout_width="21dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
@@ -337,10 +337,10 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/ls_score"
-        app:layout_constraintTop_toBottomOf="@+id/add_ss_score" />
+        app:layout_constraintTop_toBottomOf="@+id/add_small_straight_score" />
 
     <TextView
-        android:id="@+id/add_ss_score"
+        android:id="@+id/add_small_straight_score"
         android:layout_width="21dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
@@ -351,10 +351,10 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/ss_score"
-        app:layout_constraintTop_toBottomOf="@+id/add_fh_score" />
+        app:layout_constraintTop_toBottomOf="@+id/add_full_house_score" />
 
     <TextView
-        android:id="@+id/add_fh_score"
+        android:id="@+id/add_full_house_score"
         android:layout_width="21dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
@@ -365,10 +365,10 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/fh_score"
-        app:layout_constraintTop_toBottomOf="@+id/add_foak_score" />
+        app:layout_constraintTop_toBottomOf="@+id/add_four_of_a_kind_score" />
 
     <TextView
-        android:id="@+id/add_foak_score"
+        android:id="@+id/add_four_of_a_kind_score"
         android:layout_width="21dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
@@ -379,7 +379,7 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/foak_score"
-        app:layout_constraintTop_toBottomOf="@+id/add_toak_score" />
+        app:layout_constraintTop_toBottomOf="@+id/add_three_of_a_kind_score" />
 
     <TextView
         android:id="@+id/score_left"
