@@ -8,73 +8,68 @@
     android:visibility="visible">
 
     <ImageButton
-        android:id="@+id/dice3"
-        android:layout_width="105dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
-        android:background="@color/light_red"
-        android:contentDescription="@string/dice"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice1"
-        app:srcCompat="@drawable/blank_dice" />
-
-    <ImageButton
-        android:id="@+id/dice1"
-        android:layout_width="105dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="370dp"
-        android:background="@color/light_red"
-        android:contentDescription="@string/dice"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank_dice" />
-
-    <ImageButton
-        android:id="@+id/dice2"
-        android:layout_width="105dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="370dp"
-        android:background="@color/light_red"
-        android:contentDescription="@string/dice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.336"
-        app:layout_constraintStart_toEndOf="@+id/dice1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blank_dice" />
-
-    <ImageButton
         android:id="@+id/dice5"
         android:layout_width="105dp"
         android:layout_height="107dp"
         android:layout_marginTop="24dp"
-        android:background="@color/light_red"
+        android:background="@drawable/blank_dice"
         android:contentDescription="@string/dice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toEndOf="@+id/dice4"
-        app:layout_constraintTop_toBottomOf="@+id/dice2"
-        app:srcCompat="@drawable/blank_dice" />
+        app:layout_constraintTop_toBottomOf="@+id/dice2" />
 
     <ImageButton
         android:id="@+id/dice4"
         android:layout_width="105dp"
         android:layout_height="107dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="25dp"
-        android:background="@color/light_red"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/blank_dice"
         android:contentDescription="@string/dice"
         app:layout_constraintStart_toEndOf="@+id/dice3"
-        app:layout_constraintTop_toBottomOf="@+id/dice1"
-        app:srcCompat="@drawable/blank_dice" />
+        app:layout_constraintTop_toBottomOf="@+id/dice1" />
+
+    <ImageButton
+        android:id="@+id/dice1"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="448dp"
+        android:background="@drawable/blank_dice"
+        android:contentDescription="@string/dice"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/dice2"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="448dp"
+        android:background="@drawable/blank_dice"
+        android:contentDescription="@string/dice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintStart_toEndOf="@+id/dice1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/dice3"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/blank_dice"
+        android:contentDescription="@string/dice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice1" />
 
     <ImageButton
         android:id="@+id/rollButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/light_red"
         android:contentDescription="@string/roll"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,7 +77,22 @@
         app:layout_constraintHorizontal_bias="0.614"
         app:layout_constraintStart_toEndOf="@+id/endTurnButton"
         app:layout_constraintTop_toBottomOf="@+id/dice5"
+        app:layout_constraintVertical_bias="0.51"
         app:srcCompat="@drawable/roll" />
+
+    <ImageButton
+        android:id="@+id/endTurnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/light_red"
+        android:contentDescription="@string/end_turn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dice3"
+        app:layout_constraintVertical_bias="0.503"
+        app:srcCompat="@drawable/end_turn" />
 
     <TextView
         android:id="@+id/rollText"
@@ -97,19 +107,6 @@
         app:layout_constraintEnd_toEndOf="@+id/rollButton"
         app:layout_constraintStart_toStartOf="@+id/rollButton"
         app:layout_constraintTop_toTopOf="@+id/rollButton" />
-
-    <ImageButton
-        android:id="@+id/endTurnButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="15dp"
-        android:background="@color/light_red"
-        android:contentDescription="@string/end_turn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice3"
-        app:srcCompat="@drawable/end_turn" />
 
     <TextView
         android:id="@+id/endTurnText"
@@ -126,27 +123,27 @@
         app:layout_constraintTop_toTopOf="@+id/endTurnButton" />
 
     <ImageView
-        android:id="@+id/checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="20dp"
-        android:contentDescription="@string/checkbox"
-        app:layout_constraintBottom_toTopOf="@+id/dice2"
-        app:layout_constraintStart_toEndOf="@+id/checkbox1"
-        app:srcCompat="@drawable/yellow_no_check" />
-
-    <ImageView
         android:id="@+id/checkbox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="36dp"
         android:contentDescription="@string/checkbox"
         app:layout_constraintBottom_toTopOf="@+id/dice2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toEndOf="@+id/checkbox2"
+        app:srcCompat="@drawable/yellow_no_check" />
+
+    <ImageView
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="@string/checkbox"
+        app:layout_constraintBottom_toTopOf="@+id/dice2"
+        app:layout_constraintStart_toEndOf="@+id/checkbox1"
         app:srcCompat="@drawable/yellow_no_check" />
 
     <ImageView
@@ -154,7 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="36dp"
         android:contentDescription="@string/checkbox"
         app:layout_constraintBottom_toTopOf="@+id/dice1"
         app:layout_constraintStart_toStartOf="parent"
@@ -164,7 +161,7 @@
         android:id="@+id/score_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="68dp"
         android:contentDescription="@string/checkbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -271,7 +268,7 @@
 
     <TextView
         android:id="@+id/add_three_of_a_kind_score"
-        android:layout_width="21dp"
+        android:layout_width="32dp"
         android:layout_height="26dp"
         android:layout_marginTop="15dp"
         android:font="@font/exo_bold"
@@ -284,8 +281,8 @@
         app:layout_constraintTop_toTopOf="@+id/score_card" />
 
     <TextView
-        android:id="@+id/add_fiveoak_score"
-        android:layout_width="21dp"
+        android:id="@+id/add_five_of_a_kind_score"
+        android:layout_width="32dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
         android:font="@font/exo_bold"
@@ -295,25 +292,11 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/change_score"
-        app:layout_constraintTop_toBottomOf="@+id/add_large_straight_score" />
-
-    <TextView
-        android:id="@+id/add_five_of_a_kind_score"
-        android:layout_width="21dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="5dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/dash"
-        android:textAlignment="center"
-        android:textColor="@color/green"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/fiveoak_score2"
         app:layout_constraintTop_toBottomOf="@+id/add_large_straight_score" />
 
     <TextView
         android:id="@+id/add_chance_score"
-        android:layout_width="21dp"
+        android:layout_width="32dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
         android:font="@font/exo_bold"
@@ -323,11 +306,11 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/change_score"
-        app:layout_constraintTop_toBottomOf="@+id/add_fiveoak_score" />
+        app:layout_constraintTop_toBottomOf="@+id/add_five_of_a_kind_score" />
 
     <TextView
         android:id="@+id/add_large_straight_score"
-        android:layout_width="21dp"
+        android:layout_width="32dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
         android:font="@font/exo_bold"
@@ -341,7 +324,7 @@
 
     <TextView
         android:id="@+id/add_small_straight_score"
-        android:layout_width="21dp"
+        android:layout_width="32dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
         android:font="@font/exo_bold"
@@ -355,7 +338,7 @@
 
     <TextView
         android:id="@+id/add_full_house_score"
-        android:layout_width="21dp"
+        android:layout_width="32dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
         android:font="@font/exo_bold"
@@ -369,7 +352,7 @@
 
     <TextView
         android:id="@+id/add_four_of_a_kind_score"
-        android:layout_width="21dp"
+        android:layout_width="32dp"
         android:layout_height="26dp"
         android:layout_marginTop="5dp"
         android:font="@font/exo_bold"
@@ -417,8 +400,8 @@
         android:id="@+id/score_right"
         android:layout_width="151dp"
         android:layout_height="217dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="12dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:lineSpacingExtra="4sp"
