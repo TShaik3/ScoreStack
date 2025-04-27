@@ -1,6 +1,10 @@
 package com.talhah.scorestack;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -107,15 +111,25 @@ public class Game extends AppCompatActivity {
                         checkbox3.setImageResource(R.drawable.yellow_check);
                         break;
                 }
+                calculateScores();
             }
-
-            calculateScores();
         });
+    }
 
-
+    private void resetScores() {
+        for (int i = 0; i < 6; i++) {
+            scoringCategories[i] = 0;
+        }
+        add_aces_score.setText("0");
+        add_twos_score.setText("0");
+        add_threes_score.setText("0");
+        add_fours_score.setText("0");
+        add_fives_score.setText("0");
+        add_sixes_score.setText("0");
     }
 
     private void calculateScores() {
+        resetScores();
         int[] dieValues = new int[5];
         for (int i = 0; i < groupOfDie.length; i++) {
             dieValues[i] = groupOfDie[i].getCurrentSide();
@@ -224,7 +238,6 @@ public class Game extends AppCompatActivity {
         return counts.containsValue(3);
     }
 
-
     private boolean isFullHouse(int[] dieValues) {
         Map<Integer, Integer> counts = new HashMap<>();
         for (int value : dieValues) {
@@ -272,11 +285,31 @@ public class Game extends AppCompatActivity {
         for (Die d : groupOfDie) {
             d.roll();
         }
-        dice1.setImageResource(R.drawable.dice_animation);
-        dice2.setImageResource(R.drawable.dice_animation);
-        dice3.setImageResource(R.drawable.dice_animation);
-        dice4.setImageResource(R.drawable.dice_animation);
-        dice5.setImageResource(R.drawable.dice_animation);
+
+//        // Animation Needs work
+//        dice1.setBackgroundResource(R.drawable.dice_animation);
+//        dice2.setBackgroundResource(R.drawable.dice_animation);
+//        dice3.setBackgroundResource(R.drawable.dice_animation);
+//        dice4.setBackgroundResource(R.drawable.dice_animation);
+//        dice5.setBackgroundResource(R.drawable.dice_animation);
+//
+//        AnimationDrawable dice1Animation = (AnimationDrawable) dice1.getBackground();
+//        AnimationDrawable dice2Animation = (AnimationDrawable) dice2.getBackground();
+//        AnimationDrawable dice3Animation = (AnimationDrawable) dice3.getBackground();
+//        AnimationDrawable dice4Animation = (AnimationDrawable) dice4.getBackground();
+//        AnimationDrawable dice5Animation = (AnimationDrawable) dice5.getBackground();
+//
+//        dice1Animation.start();
+//        dice2Animation.start();
+//        dice3Animation.start();
+//        dice4Animation.start();
+//        dice5Animation.start();
+//
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            Thread.currentThread().interrupt();
+//        }
 
         updateDice();
     }
@@ -298,22 +331,22 @@ public class Game extends AppCompatActivity {
     private void setDiceImage(ImageButton dice, int diceValue) {
         switch (diceValue) {
             case 1:
-                dice.setImageResource(R.drawable.one);
+                dice.setBackgroundResource(R.drawable.one);
                 break;
             case 2:
-                dice.setImageResource(R.drawable.two);
+                dice.setBackgroundResource(R.drawable.two);
                 break;
             case 3:
-                dice.setImageResource(R.drawable.three);
+                dice.setBackgroundResource(R.drawable.three);
                 break;
             case 4:
-                dice.setImageResource(R.drawable.four);
+                dice.setBackgroundResource(R.drawable.four);
                 break;
             case 5:
-                dice.setImageResource(R.drawable.five);
+                dice.setBackgroundResource(R.drawable.five);
                 break;
             case 6:
-                dice.setImageResource(R.drawable.six);
+                dice.setBackgroundResource(R.drawable.six);
                 break;
         }
     }
