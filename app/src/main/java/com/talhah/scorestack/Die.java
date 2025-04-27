@@ -54,7 +54,7 @@ public class Die {
         if (!isHeld && totalRolls < 3) {
             totalRolls++;
             int min = 1;
-            currentSide = this.rand.nextInt((this.sides - min) + 1);
+            currentSide = min + this.rand.nextInt((this.sides - min) + 1);
         }
     }
 

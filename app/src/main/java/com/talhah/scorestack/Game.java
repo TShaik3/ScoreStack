@@ -114,6 +114,47 @@ public class Game extends AppCompatActivity {
                 calculateScores();
             }
         });
+
+        endTurnButton.setOnClickListener(v -> {
+            if (currentRoll > 0 && currentTurn < 13) {
+                // Send to new activity with scores
+            }
+        });
+
+        dice1.setOnClickListener(v -> {
+            if (currentRoll > 0) {
+                groupOfDie[0].setHeld(!groupOfDie[0].getHeld());
+                setDiceImage(dice1, groupOfDie[0]);
+            }
+        });
+
+        dice2.setOnClickListener(v -> {
+            if (currentRoll > 0) {
+                groupOfDie[1].setHeld(!groupOfDie[1].getHeld());
+                setDiceImage(dice2, groupOfDie[1]);
+            }
+        });
+
+        dice3.setOnClickListener(v -> {
+            if (currentRoll > 0) {
+                groupOfDie[2].setHeld(!groupOfDie[2].getHeld());
+                setDiceImage(dice3, groupOfDie[2]);
+            }
+        });
+
+        dice4.setOnClickListener(v -> {
+            if (currentRoll > 0) {
+                groupOfDie[3].setHeld(!groupOfDie[3].getHeld());
+                setDiceImage(dice4, groupOfDie[3]);
+            }
+        });
+
+        dice5.setOnClickListener(v -> {
+            if (currentRoll > 0) {
+                groupOfDie[4].setHeld(!groupOfDie[4].getHeld());
+                setDiceImage(dice5, groupOfDie[4]);
+            }
+        });
     }
 
     private void resetScores() {
@@ -315,38 +356,57 @@ public class Game extends AppCompatActivity {
     }
 
     private void updateDice() {
-        int dice1Value = groupOfDie[0].getCurrentSide();
-        int dice2Value = groupOfDie[1].getCurrentSide();
-        int dice3Value = groupOfDie[2].getCurrentSide();
-        int dice4Value = groupOfDie[3].getCurrentSide();
-        int dice5Value = groupOfDie[4].getCurrentSide();
-
-        setDiceImage(dice1, dice1Value);
-        setDiceImage(dice2, dice2Value);
-        setDiceImage(dice3, dice3Value);
-        setDiceImage(dice4, dice4Value);
-        setDiceImage(dice5, dice5Value);
+        setDiceImage(dice1, groupOfDie[0]);
+        setDiceImage(dice2, groupOfDie[1]);
+        setDiceImage(dice3, groupOfDie[2]);
+        setDiceImage(dice4, groupOfDie[3]);
+        setDiceImage(dice5, groupOfDie[4]);
     }
 
-    private void setDiceImage(ImageButton dice, int diceValue) {
+    private void setDiceImage(ImageButton dice, Die die) {
+        int diceValue = die.getCurrentSide();
         switch (diceValue) {
             case 1:
-                dice.setBackgroundResource(R.drawable.one);
+                if (die.getHeld()) {
+                    dice.setBackgroundResource(R.drawable.one_hold);
+                } else {
+                    dice.setBackgroundResource(R.drawable.one);
+                }
                 break;
             case 2:
-                dice.setBackgroundResource(R.drawable.two);
+                if (die.getHeld()) {
+                    dice.setBackgroundResource(R.drawable.two_hold);
+                } else {
+                    dice.setBackgroundResource(R.drawable.two);
+                }
                 break;
             case 3:
-                dice.setBackgroundResource(R.drawable.three);
+                if (die.getHeld()) {
+                    dice.setBackgroundResource(R.drawable.three_hold);
+                } else {
+                    dice.setBackgroundResource(R.drawable.three);
+                }
                 break;
             case 4:
-                dice.setBackgroundResource(R.drawable.four);
+                if (die.getHeld()) {
+                    dice.setBackgroundResource(R.drawable.four_hold);
+                } else {
+                    dice.setBackgroundResource(R.drawable.four);
+                }
                 break;
             case 5:
-                dice.setBackgroundResource(R.drawable.five);
+                if (die.getHeld()) {
+                    dice.setBackgroundResource(R.drawable.five_hold);
+                } else {
+                    dice.setBackgroundResource(R.drawable.five);
+                }
                 break;
             case 6:
-                dice.setBackgroundResource(R.drawable.six);
+                if (die.getHeld()) {
+                    dice.setBackgroundResource(R.drawable.six_hold);
+                } else {
+                    dice.setBackgroundResource(R.drawable.six);
+                }
                 break;
         }
     }
