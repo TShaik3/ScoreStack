@@ -11,11 +11,11 @@
         android:id="@+id/dice5"
         android:layout_width="105dp"
         android:layout_height="107dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/blank_dice"
         android:contentDescription="@string/dice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/dice4"
         app:layout_constraintTop_toBottomOf="@+id/dice2" />
 
@@ -23,45 +23,48 @@
         android:id="@+id/dice4"
         android:layout_width="105dp"
         android:layout_height="107dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/blank_dice"
         android:contentDescription="@string/dice"
+        app:layout_constraintEnd_toStartOf="@+id/dice5"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/dice3"
-        app:layout_constraintTop_toBottomOf="@+id/dice1" />
-
-    <ImageButton
-        android:id="@+id/dice1"
-        android:layout_width="105dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="448dp"
-        android:background="@drawable/blank_dice"
-        android:contentDescription="@string/dice"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/dice2" />
 
     <ImageButton
         android:id="@+id/dice2"
         android:layout_width="105dp"
         android:layout_height="107dp"
-        android:layout_marginTop="448dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/blank_dice"
         android:contentDescription="@string/dice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/dice1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/checkbox2" />
+
+    <ImageButton
+        android:id="@+id/dice1"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/blank_dice"
+        android:contentDescription="@string/dice"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/dice2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox2" />
 
     <ImageButton
         android:id="@+id/dice3"
         android:layout_width="105dp"
         android:layout_height="107dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/blank_dice"
         android:contentDescription="@string/dice"
+        app:layout_constraintEnd_toStartOf="@+id/dice4"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dice1" />
 
@@ -69,29 +72,28 @@
         android:id="@+id/rollButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/light_red"
         android:contentDescription="@string/roll"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/endTurnButton"
-        app:layout_constraintTop_toBottomOf="@+id/dice5"
-        app:layout_constraintVertical_bias="0.51"
         app:srcCompat="@drawable/roll" />
 
     <ImageButton
         android:id="@+id/endTurnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/light_red"
         android:contentDescription="@string/end_turn"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rollButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice3"
-        app:layout_constraintVertical_bias="0.503"
         app:srcCompat="@drawable/end_turn" />
 
     <TextView
@@ -126,35 +128,36 @@
         android:id="@+id/checkbox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/checkbox"
-        app:layout_constraintBottom_toTopOf="@+id/dice2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/checkbox2"
+        app:layout_constraintTop_toBottomOf="@+id/score_card"
         app:srcCompat="@drawable/yellow_no_check" />
 
     <ImageView
         android:id="@+id/checkbox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/checkbox"
-        app:layout_constraintBottom_toTopOf="@+id/dice2"
+        app:layout_constraintEnd_toStartOf="@+id/checkbox3"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/checkbox1"
+        app:layout_constraintTop_toBottomOf="@+id/score_card"
         app:srcCompat="@drawable/yellow_no_check" />
 
     <ImageView
         android:id="@+id/checkbox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/checkbox"
-        app:layout_constraintBottom_toTopOf="@+id/dice1"
+        app:layout_constraintEnd_toStartOf="@+id/checkbox2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_card"
         app:srcCompat="@drawable/yellow_no_check" />
 
     <ImageView
@@ -179,8 +182,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
-        app:layout_constraintTop_toTopOf="@+id/score_card" />
+        app:layout_constraintTop_toTopOf="@+id/score_card"
+        tools:layout_editor_absoluteX="469dp" />
 
     <TextView
         android:id="@+id/change_score"
@@ -193,8 +196,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
-        app:layout_constraintTop_toBottomOf="@+id/fiveoak_score2" />
+        app:layout_constraintTop_toBottomOf="@+id/fiveoak_score2"
+        tools:layout_editor_absoluteX="469dp" />
 
     <TextView
         android:id="@+id/fiveoak_score2"
@@ -207,8 +210,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
-        app:layout_constraintTop_toBottomOf="@+id/ls_score" />
+        app:layout_constraintTop_toBottomOf="@+id/ls_score"
+        tools:layout_editor_absoluteX="469dp" />
 
     <TextView
         android:id="@+id/ls_score"
@@ -221,8 +224,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
-        app:layout_constraintTop_toBottomOf="@+id/ss_score" />
+        app:layout_constraintTop_toBottomOf="@+id/ss_score"
+        tools:layout_editor_absoluteX="469dp" />
 
     <TextView
         android:id="@+id/ss_score"
@@ -235,8 +238,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
-        app:layout_constraintTop_toBottomOf="@+id/fh_score" />
+        app:layout_constraintTop_toBottomOf="@+id/fh_score"
+        tools:layout_editor_absoluteX="469dp" />
 
     <TextView
         android:id="@+id/fh_score"
@@ -249,8 +252,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
-        app:layout_constraintTop_toBottomOf="@+id/foak_score" />
+        app:layout_constraintTop_toBottomOf="@+id/foak_score"
+        tools:layout_editor_absoluteX="469dp" />
 
     <TextView
         android:id="@+id/foak_score"
@@ -263,8 +266,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_right"
-        app:layout_constraintTop_toBottomOf="@+id/toak_score" />
+        app:layout_constraintTop_toBottomOf="@+id/toak_score"
+        tools:layout_editor_absoluteX="469dp" />
 
     <TextView
         android:id="@+id/add_three_of_a_kind_score"
@@ -365,81 +368,18 @@
         app:layout_constraintTop_toBottomOf="@+id/add_three_of_a_kind_score" />
 
     <TextView
-        android:id="@+id/score_left"
-        android:layout_width="84dp"
-        android:layout_height="218dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="14dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:lineSpacingExtra="4sp"
-        android:text="@string/score_left"
-        android:textAlignment="textStart"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/score_card"
-        app:layout_constraintTop_toTopOf="@+id/score_card" />
-
-    <TextView
-        android:id="@+id/score_equals_left"
-        android:layout_width="20dp"
-        android:layout_height="213dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="15dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:lineSpacingExtra="4sp"
-        android:text="@string/score_equals"
-        android:textAlignment="textStart"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/score_left"
-        app:layout_constraintTop_toTopOf="@+id/score_card" />
-
-    <TextView
-        android:id="@+id/score_right"
-        android:layout_width="151dp"
-        android:layout_height="217dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="12dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:lineSpacingExtra="4sp"
-        android:text="@string/score_right"
-        android:textAlignment="textStart"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
-        app:layout_constraintTop_toTopOf="@+id/score_card" />
-
-    <TextView
-        android:id="@+id/score_equals_right"
-        android:layout_width="19dp"
-        android:layout_height="215dp"
-        android:layout_marginTop="15dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:lineSpacingExtra="4sp"
-        android:text="@string/score_equals"
-        android:textAlignment="textStart"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_right"
-        app:layout_constraintTop_toTopOf="@+id/score_card" />
-
-    <TextView
         android:id="@+id/aces_score"
         android:layout_width="21dp"
         android:layout_height="26dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
-        app:layout_constraintTop_toTopOf="@+id/score_card" />
+        app:layout_constraintTop_toTopOf="@+id/score_card"
+        tools:layout_editor_absoluteX="250dp" />
 
     <TextView
         android:id="@+id/twos_score"
@@ -452,8 +392,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
-        app:layout_constraintTop_toBottomOf="@+id/aces_score" />
+        app:layout_constraintTop_toBottomOf="@+id/aces_score"
+        tools:layout_editor_absoluteX="250dp" />
 
     <TextView
         android:id="@+id/threes_score"
@@ -466,8 +406,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
-        app:layout_constraintTop_toBottomOf="@+id/twos_score" />
+        app:layout_constraintTop_toBottomOf="@+id/twos_score"
+        tools:layout_editor_absoluteX="250dp" />
 
     <TextView
         android:id="@+id/fours_score"
@@ -480,8 +420,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
-        app:layout_constraintTop_toBottomOf="@+id/threes_score" />
+        app:layout_constraintTop_toBottomOf="@+id/threes_score"
+        tools:layout_editor_absoluteX="250dp" />
 
     <TextView
         android:id="@+id/fives_score"
@@ -494,8 +434,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
-        app:layout_constraintTop_toBottomOf="@+id/fours_score" />
+        app:layout_constraintTop_toBottomOf="@+id/fours_score"
+        tools:layout_editor_absoluteX="250dp" />
 
     <TextView
         android:id="@+id/sixes_score"
@@ -508,8 +448,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
-        app:layout_constraintTop_toBottomOf="@+id/fives_score" />
+        app:layout_constraintTop_toBottomOf="@+id/fives_score"
+        tools:layout_editor_absoluteX="250dp" />
 
     <TextView
         android:id="@+id/bonus_score"
@@ -522,14 +462,16 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_left"
-        app:layout_constraintTop_toBottomOf="@+id/sixes_score" />
+        app:layout_constraintBottom_toBottomOf="@+id/score_card"
+        app:layout_constraintTop_toBottomOf="@+id/sixes_score"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="250dp" />
 
     <TextView
         android:id="@+id/add_aces_score"
         android:layout_width="21dp"
         android:layout_height="26dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
@@ -622,6 +564,111 @@
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/bonus_score"
         app:layout_constraintTop_toBottomOf="@+id/add_sixes_score" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/aces"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/score_card"
+        app:layout_constraintTop_toBottomOf="@+id/score_card" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/aces"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/score_card"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/aces"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/score_card"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/aces"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/score_card"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/aces"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/score_card"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/aces"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/score_card"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/aces"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/score_card"
+        app:layout_constraintStart_toStartOf="@+id/score_card"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
