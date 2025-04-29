@@ -1,10 +1,7 @@
 package com.talhah.scorestack;
 
-import android.graphics.drawable.AnimationDrawable;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,6 +18,7 @@ public class Game extends AppCompatActivity {
     private int currentTurn;
     private int currentRoll;
     private int[] scoringCategories = new int[13];
+    private int[] finishedCategories = new int[13];
 
     ImageButton rollButton;
     ImageButton endTurnButton;
@@ -46,16 +44,45 @@ public class Game extends AppCompatActivity {
     TextView add_five_of_a_kind_score;
     TextView add_chance_score;
 
+    TextView acesScore;
+    TextView twosScore;
+    TextView threesScore;
+    TextView foursScore;
+    TextView fivesScore;
+    TextView sixesScore;
+
+    TextView toakScore;
+    TextView foakScore;
+    TextView fullScore;
+    TextView smallScore;
+    TextView largeScore;
+    TextView fiveoakScore;
+    TextView chanceScore;
+
     ImageView checkbox1;
     ImageView checkbox2;
     ImageView checkbox3;
 
     TextView[] scoreLeft;
+    TextView[] scoreList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_screen);
+
+        if (getIntent().getExtras() != null) {
+            scoringCategories = getIntent().getExtras().getIntArray("scoringCategories");
+            finishedCategories = getIntent().getExtras().getIntArray("finishedCategories");
+            updateScores();
+        } else {
+            for (int i : scoringCategories) {
+                i = 0;
+            }
+            for (int i : finishedCategories) {
+                i = 0;
+            }
+        }
 
         groupOfDie = new Die[5];
         for (int i = 0; i < groupOfDie.length; i++) {
@@ -89,6 +116,10 @@ public class Game extends AppCompatActivity {
         add_five_of_a_kind_score = findViewById(R.id.add_five_of_a_kind_score);
         add_chance_score = findViewById(R.id.add_chance_score);
 
+        scoreList = new TextView[]{ acesScore, twosScore, threesScore, foursScore, fivesScore,
+                                    sixesScore, toakScore, foakScore, fullScore, smallScore,
+                                    largeScore, fiveoakScore, chanceScore };
+
         checkbox1 = findViewById(R.id.checkbox1);
         checkbox2 = findViewById(R.id.checkbox2);
         checkbox3 = findViewById(R.id.checkbox3);
@@ -117,7 +148,10 @@ public class Game extends AppCompatActivity {
 
         endTurnButton.setOnClickListener(v -> {
             if (currentRoll > 0 && currentTurn < 13) {
-                // Send to new activity with scores
+                Intent intent = new Intent(Game.this, Results.class);
+                intent.putExtra("scoringCategories", scoringCategories);
+                intent.putExtra("finishedCategories", finishedCategories);
+                startActivity(intent);
             }
         });
 
@@ -155,6 +189,15 @@ public class Game extends AppCompatActivity {
                 setDiceImage(dice5, groupOfDie[4]);
             }
         });
+    }
+
+    private void updateScores() {
+        for (int i = 0; i < finishedCategories.length; i++) {
+            scoreList[i].setText(String.valueOf(finishedCategories[i]));
+            if (finishedCategories[i] != 0) {
+                scoreLeft[i].setTextColor(getResources().getColor(R.color.red));
+            }
+        }
     }
 
     private void resetScores() {
