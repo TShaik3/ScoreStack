@@ -186,7 +186,7 @@
         app:layout_constraintTop_toBottomOf="@+id/top_right_score" />
 
     <TextView
-        android:id="@+id/change_score"
+        android:id="@+id/fiveoak_score"
         android:layout_width="21dp"
         android:layout_height="25dp"
         android:font="@font/exo_bold"
@@ -209,7 +209,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/change_score"
+        app:layout_constraintBottom_toTopOf="@+id/fiveoak_score"
         app:layout_constraintStart_toEndOf="@+id/five_oak_equals"
         app:layout_constraintTop_toBottomOf="@+id/ls_score" />
 
@@ -308,7 +308,7 @@
         android:textColor="@color/green"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_right_add_space"
-        app:layout_constraintStart_toEndOf="@+id/change_score"
+        app:layout_constraintStart_toEndOf="@+id/fiveoak_score"
         app:layout_constraintTop_toBottomOf="@+id/add_five_of_a_kind_score" />
 
     <TextView
@@ -1091,7 +1091,7 @@
         android:layout_height="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/score_card"
         app:layout_constraintStart_toEndOf="@+id/bottom_right_equals"
-        app:layout_constraintTop_toBottomOf="@+id/change_score" />
+        app:layout_constraintTop_toBottomOf="@+id/fiveoak_score" />
 
     <Space
         android:id="@+id/top_right_add_space"

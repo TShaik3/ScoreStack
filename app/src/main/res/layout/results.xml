@@ -21,121 +21,58 @@
         android:id="@+id/ls_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/fiveoak_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/ss_score" />
 
     <TextView
-        android:id="@+id/change_score"
+        android:id="@+id/fiveoak_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/chance_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/ls_score" />
 
     <TextView
-        android:id="@+id/change_score2"
+        android:id="@+id/chance_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_bottom"
-        app:layout_constraintTop_toBottomOf="@+id/change_score" />
-
-    <TextView
-        android:id="@+id/score_top"
-        android:layout_width="84dp"
-        android:layout_height="262dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="72dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:lineSpacingExtra="11sp"
-        android:text="@string/score_left"
-        android:textAlignment="textStart"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
-        app:layout_constraintTop_toTopOf="@+id/finalResultBack" />
-
-    <TextView
-        android:id="@+id/score_equals_top"
-        android:layout_width="26dp"
-        android:layout_height="263dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="72dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:lineSpacingExtra="11sp"
-        android:text="@string/score_equals"
-        android:textAlignment="center"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_top"
-        app:layout_constraintTop_toTopOf="@+id/finalResultBack" />
-
-    <TextView
-        android:id="@+id/score_bottom"
-        android:layout_width="157dp"
-        android:layout_height="275dp"
-        android:layout_marginStart="24dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:lineSpacingExtra="11sp"
-        android:text="@string/score_right"
-        android:textAlignment="textStart"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
-        app:layout_constraintTop_toBottomOf="@+id/score_top" />
-
-    <TextView
-        android:id="@+id/score_equals_bottom"
-        android:layout_width="26dp"
-        android:layout_height="277dp"
-        android:layout_marginStart="51dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:lineSpacingExtra="11sp"
-        android:text="@string/score_equals"
-        android:textAlignment="center"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_bottom"
-        app:layout_constraintTop_toBottomOf="@+id/score_equals_top" />
+        app:layout_constraintBottom_toTopOf="@+id/bottom_right_space"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/fiveoak_score" />
 
     <ImageButton
         android:id="@+id/nextTurnButton"
-        android:layout_width="383dp"
-        android:layout_height="80dp"
-        android:background="@color/light_red"
+        android:layout_width="351dp"
+        android:layout_height="68dp"
+        android:background="@drawable/blue_button"
         android:contentDescription="@string/next_turn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/finalResultBack"
-        app:layout_constraintVertical_bias="0.555"
-        app:srcCompat="@drawable/blue_button" />
+        app:layout_constraintVertical_bias="0.555" />
 
     <TextView
         android:id="@+id/nextTurnText"
@@ -167,167 +104,167 @@
 
     <TextView
         android:id="@+id/aces_score"
-        android:layout_width="67dp"
+        android:layout_width="68dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_top"
-        app:layout_constraintTop_toBottomOf="@+id/results" />
+        app:layout_constraintBottom_toTopOf="@+id/twos_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/top_right_space" />
 
     <TextView
         android:id="@+id/twos_score"
         android:layout_width="68dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_top"
+        app:layout_constraintBottom_toTopOf="@+id/threes_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/aces_score" />
 
     <TextView
         android:id="@+id/threes_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_top"
+        app:layout_constraintBottom_toTopOf="@+id/fours_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/twos_score" />
 
     <TextView
         android:id="@+id/fours_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_top"
+        app:layout_constraintBottom_toTopOf="@+id/fives_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/threes_score" />
 
     <TextView
         android:id="@+id/fives_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_top"
+        app:layout_constraintBottom_toTopOf="@+id/sixes_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/fours_score" />
 
     <TextView
         android:id="@+id/sixes_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_top"
+        app:layout_constraintBottom_toTopOf="@+id/bonus_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/fives_score" />
 
     <TextView
-        android:id="@+id/sixes_score2"
+        android:id="@+id/bonus_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_top"
+        app:layout_constraintBottom_toTopOf="@+id/toak_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/sixes_score" />
 
     <TextView
         android:id="@+id/toak_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_bottom"
-        app:layout_constraintTop_toBottomOf="@+id/sixes_score2" />
+        app:layout_constraintBottom_toTopOf="@+id/foak_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/bonus_score" />
 
     <TextView
         android:id="@+id/foak_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/fh_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/toak_score" />
 
     <TextView
         android:id="@+id/fh_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/ss_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/foak_score" />
 
     <TextView
         android:id="@+id/ss_score"
         android:layout_width="69dp"
         android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
         android:font="@font/exo_bold"
         android:fontFamily="@font/exo_bold"
         android:text="@string/dash"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/score_equals_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/ls_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/fh_score" />
 
     <TextView
@@ -351,22 +288,23 @@
         android:id="@+id/acesButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="8dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/twosButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
-        app:layout_constraintTop_toBottomOf="@+id/results" />
+        app:layout_constraintTop_toBottomOf="@+id/space" />
 
     <Button
         android:id="@+id/twosButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="4dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/threesButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/acesButton" />
 
@@ -374,11 +312,11 @@
         android:id="@+id/threesButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="1dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/foursButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/twosButton" />
 
@@ -388,8 +326,9 @@
         android:layout_height="36dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fivesButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/threesButton" />
 
@@ -397,11 +336,11 @@
         android:id="@+id/fivesButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="4dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/sixesButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/foursButton" />
 
@@ -409,11 +348,11 @@
         android:id="@+id/sixesButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="2dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bonusButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/fivesButton" />
 
@@ -423,8 +362,9 @@
         android:layout_height="36dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/threeOfAKindButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/sixesButton" />
 
@@ -432,11 +372,11 @@
         android:id="@+id/threeOfAKindButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="2dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fourOfAKindButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/bonusButton" />
 
@@ -444,10 +384,11 @@
         android:id="@+id/fourOfAKindButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="2dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fullHouseButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/threeOfAKindButton" />
 
@@ -455,21 +396,23 @@
         android:id="@+id/fullHouseButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="40dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/smallStraightButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
-        app:layout_constraintTop_toBottomOf="@+id/threeOfAKindButton" />
+        app:layout_constraintTop_toBottomOf="@+id/fourOfAKindButton" />
 
     <Button
         android:id="@+id/smallStraightButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="2dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/largeStraightButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/fullHouseButton" />
 
@@ -477,10 +420,11 @@
         android:id="@+id/largeStraightButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="3dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fiveOfAKindButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/smallStraightButton" />
 
@@ -488,10 +432,11 @@
         android:id="@+id/fiveOfAKindButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="1dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/chanceButton"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/largeStraightButton" />
 
@@ -499,12 +444,311 @@
         android:id="@+id/chanceButton"
         android:layout_width="306dp"
         android:layout_height="36dp"
-        android:layout_marginTop="2dp"
         android:background="@color/hidden"
         app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/space2"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/finalResultBack"
         app:layout_constraintTop_toBottomOf="@+id/fiveOfAKindButton" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="303dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/acesButton"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toTopOf="@+id/finalResultBack"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="301dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/finalResultBack"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/chanceButton" />
+
+    <Space
+        android:id="@+id/top_right_space"
+        android:layout_width="94dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/aces_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintTop_toTopOf="@+id/finalResultBack"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Space
+        android:id="@+id/top_left_space"
+        android:layout_width="84dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/aces_text2"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintTop_toTopOf="@+id/finalResultBack"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Space
+        android:id="@+id/bottom_left_space"
+        android:layout_width="143dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toBottomOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/chance_text2" />
+
+    <TextView
+        android:id="@+id/chance_text2"
+        android:layout_width="147dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/chance"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_left_space"
+        app:layout_constraintTop_toBottomOf="@+id/five_of_a_kind_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/five_of_a_kind_text2"
+        android:layout_width="145dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/five_oak"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/chance_text2"
+        app:layout_constraintTop_toBottomOf="@+id/large_straight_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/large_straight_text2"
+        android:layout_width="145dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/large_straight"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/five_of_a_kind_text2"
+        app:layout_constraintTop_toBottomOf="@+id/small_straight_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/small_straight_text2"
+        android:layout_width="145dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/small_straight"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/large_straight_text2"
+        app:layout_constraintTop_toBottomOf="@+id/full_house_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/full_house_text2"
+        android:layout_width="145dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/full_house"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/small_straight_text2"
+        app:layout_constraintTop_toBottomOf="@+id/four_of_a_kind_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/four_of_a_kind_text2"
+        android:layout_width="145dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/four_oak"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/full_house_text2"
+        app:layout_constraintTop_toBottomOf="@+id/three_of_a_kind_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/three_of_a_kind_text2"
+        android:layout_width="145dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/three_oak"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/four_of_a_kind_text2"
+        app:layout_constraintTop_toBottomOf="@+id/bonus_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/bonus_text2"
+        android:layout_width="70dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/bonus"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/three_of_a_kind_text2"
+        app:layout_constraintTop_toBottomOf="@+id/sixes_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/sixes_text2"
+        android:layout_width="70dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/sixes"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/bonus_text2"
+        app:layout_constraintTop_toBottomOf="@+id/fives_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/fives_text2"
+        android:layout_width="70dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/fives"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/sixes_text2"
+        app:layout_constraintTop_toBottomOf="@+id/fours_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/fours_text2"
+        android:layout_width="70dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/fours"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/fives_text2"
+        app:layout_constraintTop_toBottomOf="@+id/threes_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/threes_text2"
+        android:layout_width="70dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/threes"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/fours_text2"
+        app:layout_constraintTop_toBottomOf="@+id/twos_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/twos_text2"
+        android:layout_width="70dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/twos"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/threes_text2"
+        app:layout_constraintTop_toBottomOf="@+id/aces_text2"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/aces_text2"
+        android:layout_width="70dp"
+        android:layout_height="34dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/aces"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="@+id/finalResultBack"
+        app:layout_constraintBottom_toTopOf="@+id/twos_text2"
+        app:layout_constraintTop_toBottomOf="@+id/top_left_space"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <Space
+        android:id="@+id/bottom_right_space"
+        android:layout_width="65dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/finalResultBack"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/chance_score" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
