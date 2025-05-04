@@ -95,7 +95,7 @@ public class Game extends AppCompatActivity {
         dice4 = findViewById(R.id.dice4);
         dice5 = findViewById(R.id.dice5);
 
-        rollButton = findViewById(R.id.rollButton);
+        rollButton = findViewById(R.id.playButton);
         endTurnButton = findViewById(R.id.endTurnButton);
 
         add_aces_score = findViewById(R.id.add_aces_score);
