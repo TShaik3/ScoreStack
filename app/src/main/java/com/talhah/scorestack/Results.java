@@ -84,8 +84,8 @@ public class Results extends AppCompatActivity {
         fullScore = findViewById(R.id.fh_score);
         smallScore = findViewById(R.id.ss_score);
         largeScore = findViewById(R.id.ls_score);
-        fiveoakScore = findViewById(R.id.fiveoak_score);
-        chanceScore = findViewById(R.id.chance_score);
+        fiveoakScore = findViewById(R.id.chance_score);
+        chanceScore = findViewById(R.id.fiveoak_score);
 
         nextTurnButton = findViewById(R.id.nextTurnButton);
 

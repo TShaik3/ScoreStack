@@ -1,6 +1,5 @@
 package com.talhah.scorestack;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -10,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Game extends AppCompatActivity {
@@ -21,28 +21,13 @@ public class Game extends AppCompatActivity {
     private int[] finishedCategories = new int[13];
 
     ImageButton rollButton;
-    ImageButton endTurnButton;
+    ImageButton playButton;
 
     ImageButton dice1;
     ImageButton dice2;
     ImageButton dice3;
     ImageButton dice4;
     ImageButton dice5;
-
-    TextView add_aces_score;
-    TextView add_twos_score;
-    TextView add_threes_score;
-    TextView add_fours_score;
-    TextView add_fives_score;
-    TextView add_sixes_score;
-
-    TextView add_three_of_a_kind_score;
-    TextView add_four_of_a_kind_score;
-    TextView add_full_house_score;
-    TextView add_small_straight_score;
-    TextView add_large_straight_score;
-    TextView add_five_of_a_kind_score;
-    TextView add_chance_score;
 
     TextView acesScore;
     TextView twosScore;
@@ -59,11 +44,25 @@ public class Game extends AppCompatActivity {
     TextView fiveoakScore;
     TextView chanceScore;
 
-    ImageView checkbox1;
-    ImageView checkbox2;
-    ImageView checkbox3;
+    ImageButton acesButton;
+    ImageButton twosButton;
+    ImageButton threesButton;
+    ImageButton foursButton;
+    ImageButton fivesButton;
+    ImageButton sixesButton;
 
-    TextView[] scoreLeft;
+    ImageButton toakButton;
+    ImageButton foakButton;
+    ImageButton fullButton;
+    ImageButton smallButton;
+    ImageButton largeButton;
+    ImageButton fiveoakButton;
+    ImageButton chanceButton;
+
+    ImageView star1;
+    ImageView star2;
+    ImageView star3;
+
     TextView[] scoreList;
 
     @Override
@@ -71,17 +70,11 @@ public class Game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_screen);
 
-        if (getIntent().getExtras() != null) {
-            scoringCategories = getIntent().getExtras().getIntArray("scoringCategories");
-            finishedCategories = getIntent().getExtras().getIntArray("finishedCategories");
-            updateScores();
-        } else {
-            for (int i : scoringCategories) {
-                i = 0;
-            }
-            for (int i : finishedCategories) {
-                i = 0;
-            }
+        for (int i : scoringCategories) {
+            i = 0;
+        }
+        for (int i : finishedCategories) {
+            i = 0;
         }
 
         groupOfDie = new Die[5];
@@ -95,34 +88,49 @@ public class Game extends AppCompatActivity {
         dice4 = findViewById(R.id.dice4);
         dice5 = findViewById(R.id.dice5);
 
-        rollButton = findViewById(R.id.playButton);
-        endTurnButton = findViewById(R.id.endTurnButton);
-
-        add_aces_score = findViewById(R.id.add_aces_score);
-        add_twos_score = findViewById(R.id.add_twos_score);
-        add_threes_score = findViewById(R.id.add_threes_score);
-        add_fours_score = findViewById(R.id.add_fours_score);
-        add_fives_score = findViewById(R.id.add_fives_score);
-        add_sixes_score = findViewById(R.id.add_sixes_score);
-
-        scoreLeft = new TextView[]{add_aces_score, add_twos_score, add_threes_score,
-                                    add_fours_score, add_fives_score, add_sixes_score};
-
-        add_three_of_a_kind_score = findViewById(R.id.add_three_of_a_kind_score);
-        add_four_of_a_kind_score = findViewById(R.id.add_four_of_a_kind_score);
-        add_full_house_score = findViewById(R.id.add_full_house_score);
-        add_small_straight_score = findViewById(R.id.add_small_straight_score);
-        add_large_straight_score = findViewById(R.id.add_large_straight_score);
-        add_five_of_a_kind_score = findViewById(R.id.add_five_of_a_kind_score);
-        add_chance_score = findViewById(R.id.add_chance_score);
+        rollButton = findViewById(R.id.rollButton);
+        playButton = findViewById(R.id.playButton);
 
         scoreList = new TextView[]{ acesScore, twosScore, threesScore, foursScore, fivesScore,
                                     sixesScore, toakScore, foakScore, fullScore, smallScore,
                                     largeScore, fiveoakScore, chanceScore };
 
-        checkbox1 = findViewById(R.id.checkbox1);
-        checkbox2 = findViewById(R.id.checkbox2);
-        checkbox3 = findViewById(R.id.checkbox3);
+        star1 = findViewById(R.id.star1);
+        star2 = findViewById(R.id.star2);
+        star3 = findViewById(R.id.star3);
+
+        acesButton = findViewById(R.id.acesButton);
+        twosButton = findViewById(R.id.twosButton);
+        threesButton = findViewById(R.id.threesButton);
+        foursButton = findViewById(R.id.foursButton);
+        fivesButton = findViewById(R.id.fivesButton);
+        sixesButton = findViewById(R.id.sixesButton);
+        toakButton = findViewById(R.id.toakButton);
+        foakButton = findViewById(R.id.foakButton);
+        fullButton = findViewById(R.id.fhButton);
+        smallButton = findViewById(R.id.ssButton);
+        largeButton = findViewById(R.id.lsButton);
+        fiveoakButton = findViewById(R.id.fiveoakButton);
+        chanceButton = findViewById(R.id.chanceButton);
+
+        List<ImageButton> scoresList = List.of(acesButton, twosButton, threesButton, foursButton, fivesButton,
+                                                sixesButton, toakButton, foakButton, fullButton, smallButton,
+                                                largeButton, fiveoakButton, chanceButton);
+
+        acesScore = findViewById(R.id.aces_score);
+        twosScore = findViewById(R.id.twos_score);
+        threesScore = findViewById(R.id.threes_score);
+        foursScore = findViewById(R.id.fours_score);
+        fivesScore = findViewById(R.id.fives_score);
+        sixesScore = findViewById(R.id.sixes_score);
+
+        toakScore = findViewById(R.id.toak_score);
+        foakScore = findViewById(R.id.foak_score);
+        fullScore = findViewById(R.id.fh_score);
+        smallScore = findViewById(R.id.ss_score);
+        largeScore = findViewById(R.id.ls_score);
+        fiveoakScore = findViewById(R.id.fiveoak_score);
+        chanceScore = findViewById(R.id.chance_score);
 
         currentRoll = 0;
         currentTurn = 0;
@@ -133,25 +141,38 @@ public class Game extends AppCompatActivity {
                 currentRoll++;
                 switch (currentRoll) {
                     case 1:
-                        checkbox1.setImageResource(R.drawable.yellow_check);
+                        star1.setImageResource(R.drawable.filled_star);
                         break;
                     case 2:
-                        checkbox2.setImageResource(R.drawable.yellow_check);
+                        star2.setImageResource(R.drawable.filled_star);
                         break;
                     case 3:
-                        checkbox3.setImageResource(R.drawable.yellow_check);
+                        star3.setImageResource(R.drawable.filled_star);
                         break;
                 }
                 calculateScores();
+                swapButtons(true);
             }
         });
 
-        endTurnButton.setOnClickListener(v -> {
+        int index = 0;
+        for (ImageButton button : scoresList) {
+            button.setTransitionName(String.valueOf(index++));
+            button.setOnClickListener(v -> {
+                if (currentRoll > 0 && currentTurn < 13) {
+
+                }
+            });
+        }
+
+        playButton.setOnClickListener(v -> {
             if (currentRoll > 0 && currentTurn < 13) {
-                Intent intent = new Intent(Game.this, Results.class);
-                intent.putExtra("scoringCategories", scoringCategories);
-                intent.putExtra("finishedCategories", finishedCategories);
-                startActivity(intent);
+                currentRoll = 0;
+                star1.setImageResource(R.drawable.empty_star);
+                star2.setImageResource(R.drawable.empty_star);
+                star3.setImageResource(R.drawable.empty_star);
+                currentTurn++;
+                swapButtons(false);
             }
         });
 
@@ -191,12 +212,37 @@ public class Game extends AppCompatActivity {
         });
     }
 
-    private void updateScores() {
-        for (int i = 0; i < finishedCategories.length; i++) {
-            scoreList[i].setText(String.valueOf(finishedCategories[i]));
-            if (finishedCategories[i] != 0) {
-                scoreLeft[i].setTextColor(getResources().getColor(R.color.red));
-            }
+    private void swapButtons(boolean isActive) {
+        if (isActive) {
+            acesButton.setBackgroundResource(R.drawable.category_button);
+            twosButton.setBackgroundResource(R.drawable.category_button);
+            threesButton.setBackgroundResource(R.drawable.category_button);
+            foursButton.setBackgroundResource(R.drawable.category_button);
+            fivesButton.setBackgroundResource(R.drawable.category_button);
+            sixesButton.setBackgroundResource(R.drawable.category_button);
+
+            toakButton.setBackgroundResource(R.drawable.category_button);
+            foakButton.setBackgroundResource(R.drawable.category_button);
+            fullButton.setBackgroundResource(R.drawable.category_button);
+            smallButton.setBackgroundResource(R.drawable.category_button);
+            largeButton.setBackgroundResource(R.drawable.category_button);
+            fiveoakButton.setBackgroundResource(R.drawable.category_button);
+            chanceButton.setBackgroundResource(R.drawable.category_button);
+        } else {
+            acesButton.setBackgroundResource(R.drawable.inactive_button);
+            twosButton.setBackgroundResource(R.drawable.inactive_button);
+            threesButton.setBackgroundResource(R.drawable.inactive_button);
+            foursButton.setBackgroundResource(R.drawable.inactive_button);
+            fivesButton.setBackgroundResource(R.drawable.inactive_button);
+            sixesButton.setBackgroundResource(R.drawable.inactive_button);
+
+            toakButton.setBackgroundResource(R.drawable.inactive_button);
+            foakButton.setBackgroundResource(R.drawable.inactive_button);
+            fullButton.setBackgroundResource(R.drawable.inactive_button);
+            smallButton.setBackgroundResource(R.drawable.inactive_button);
+            largeButton.setBackgroundResource(R.drawable.inactive_button);
+            fiveoakButton.setBackgroundResource(R.drawable.inactive_button);
+            chanceButton.setBackgroundResource(R.drawable.inactive_button);
         }
     }
 
@@ -204,12 +250,6 @@ public class Game extends AppCompatActivity {
         for (int i = 0; i < 6; i++) {
             scoringCategories[i] = 0;
         }
-        add_aces_score.setText("0");
-        add_twos_score.setText("0");
-        add_threes_score.setText("0");
-        add_fours_score.setText("0");
-        add_fives_score.setText("0");
-        add_sixes_score.setText("0");
     }
 
     private void calculateScores() {
@@ -219,83 +259,97 @@ public class Game extends AppCompatActivity {
             dieValues[i] = groupOfDie[i].getCurrentSide();
             switch (dieValues[i]) {
                 case 1:
-                    scoringCategories[0] += 1;
-                    add_aces_score.setText(String.valueOf(scoringCategories[0]));
+                    if (scoringCategories[0] == 0) {
+                        scoringCategories[0] += 1;
+                        acesScore.setText(String.valueOf(scoringCategories[0]));
+                    }
                     break;
                 case 2:
-                    scoringCategories[1] += 2;
-                    add_twos_score.setText(String.valueOf(scoringCategories[1]));
+                    if (scoringCategories[1] == 0) {
+                        scoringCategories[1] += 2;
+                        twosScore.setText(String.valueOf(scoringCategories[1]));
+                    }
                     break;
                 case 3:
-                    scoringCategories[2] += 3;
-                    add_threes_score.setText(String.valueOf(scoringCategories[2]));
+                    if (scoringCategories[2] == 0) {
+                        scoringCategories[2] += 3;
+                        threesScore.setText(String.valueOf(scoringCategories[2]));
+                    }
                     break;
                 case 4:
-                    scoringCategories[3] += 4;
-                    add_fours_score.setText(String.valueOf(scoringCategories[3]));
+                    if (scoringCategories[3] == 0) {
+                        scoringCategories[3] += 4;
+                        foursScore.setText(String.valueOf(scoringCategories[4]));
+                    }
                     break;
                 case 5:
-                    scoringCategories[4] += 5;
-                    add_fives_score.setText(String.valueOf(scoringCategories[4]));
+                    if (scoringCategories[4] == 0) {
+                        scoringCategories[4] += 5;
+                        fivesScore.setText(String.valueOf(scoringCategories[4]));
+                    }
                     break;
                 case 6:
-                    scoringCategories[5] += 6;
-                    add_sixes_score.setText(String.valueOf(scoringCategories[5]));
+                    if (scoringCategories[5] == 0) {
+                        scoringCategories[5] += 6;
+                        sixesScore.setText(String.valueOf(scoringCategories[5]));
+                    }
                     break;
             }
         }
 
         // Calculate Three of a Kind
-        if (isThreeOfAKind(dieValues)) {
+        if (isThreeOfAKind(dieValues) && scoringCategories[6] == 0) {
             scoringCategories[6] = sumOfDice(dieValues);
-            add_three_of_a_kind_score.setText(String.valueOf(sumOfDice(dieValues)));
+            toakScore.setText(String.valueOf(sumOfDice(dieValues)));
         } else {
-            add_three_of_a_kind_score.setText("0");
+            toakScore.setText("0");
         }
 
         // Calculate Four of a Kind
-        if (isFourOfAKind(dieValues)) {
+        if (isFourOfAKind(dieValues) && scoringCategories[7] == 0) {
             scoringCategories[7] = sumOfDice(dieValues);
-            add_four_of_a_kind_score.setText(String.valueOf(sumOfDice(dieValues)));
+            foakScore.setText(String.valueOf(sumOfDice(dieValues)));
         } else {
-            add_four_of_a_kind_score.setText("0");
+            foakScore.setText("0");
         }
 
         // Calculate Full House
-        if (isFullHouse(dieValues)) {
+        if (isFullHouse(dieValues) && scoringCategories[8] == 0) {
             scoringCategories[8] = 25;
-            add_full_house_score.setText(String.valueOf(25));
+            fullScore.setText(String.valueOf(25));
         } else {
-            add_full_house_score.setText("0");
+            fullScore.setText("0");
         }
 
         // Calculate Small Straight
-        if (isSmallStraight(dieValues)) {
+        if (isSmallStraight(dieValues) && scoringCategories[9] == 0) {
             scoringCategories[9] = 30;
-            add_small_straight_score.setText(String.valueOf(30));
+            smallScore.setText(String.valueOf(30));
         } else {
-            add_small_straight_score.setText("0");
+            smallScore.setText("0");
         }
 
         // Calculate Large Straight
-        if (isLargeStraight(dieValues)) {
+        if (isLargeStraight(dieValues) && scoringCategories[10] == 0) {
             scoringCategories[10] = 40;
-            add_large_straight_score.setText(String.valueOf(40));
+            largeScore.setText(String.valueOf(40));
         } else {
-            add_large_straight_score.setText("0");
+            largeScore.setText("0");
         }
 
         // Calculate Five of a Kind
-        if (isFiveOfAKind(dieValues)) {
+        if (isFiveOfAKind(dieValues) && scoringCategories[11] == 0) {
             scoringCategories[11] = 50;
-            add_five_of_a_kind_score.setText(String.valueOf(50));
+            fiveoakScore.setText(String.valueOf(50));
         } else {
-            add_five_of_a_kind_score.setText("0");
+            fiveoakScore.setText("0");
         }
 
         // Calculate Chance
-        scoringCategories[12] = sumOfDice(dieValues);
-        add_chance_score.setText(String.valueOf(sumOfDice(dieValues)));
+        if (scoringCategories[12] == 0) {
+            scoringCategories[12] = sumOfDice(dieValues);
+            chanceScore.setText(String.valueOf(sumOfDice(dieValues)));
+        }
     }
 
     private int sumOfDice(int[] dieValues) {

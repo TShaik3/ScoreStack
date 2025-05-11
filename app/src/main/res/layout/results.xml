@@ -28,24 +28,9 @@
         android:textAlignment="center"
         android:textColor="@color/green"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/fiveoak_score"
-        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintTop_toBottomOf="@+id/ss_score" />
-
-    <TextView
-        android:id="@+id/fiveoak_score"
-        android:layout_width="69dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="30dp"
-        android:font="@font/exo_bold"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/dash"
-        android:textAlignment="center"
-        android:textColor="@color/green"
-        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/chance_score"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintTop_toBottomOf="@+id/ls_score" />
+        app:layout_constraintTop_toBottomOf="@+id/ss_score" />
 
     <TextView
         android:id="@+id/chance_score"
@@ -58,9 +43,24 @@
         android:textAlignment="center"
         android:textColor="@color/green"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/fiveoak_score"
+        app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
+        app:layout_constraintTop_toBottomOf="@+id/ls_score" />
+
+    <TextView
+        android:id="@+id/fiveoak_score"
+        android:layout_width="69dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="30dp"
+        android:font="@font/exo_bold"
+        android:fontFamily="@font/exo_bold"
+        android:text="@string/dash"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_right_space"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintTop_toBottomOf="@+id/fiveoak_score" />
+        app:layout_constraintTop_toBottomOf="@+id/chance_score" />
 
     <ImageButton
         android:id="@+id/nextTurnButton"
@@ -749,6 +749,6 @@
         android:layout_marginEnd="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/finalResultBack"
         app:layout_constraintEnd_toEndOf="@+id/finalResultBack"
-        app:layout_constraintTop_toBottomOf="@+id/chance_score" />
+        app:layout_constraintTop_toBottomOf="@+id/fiveoak_score" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

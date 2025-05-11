@@ -73,5 +73,6 @@
     <string name="thirty">30</string>
     <string name="forty">40</string>
     <string name="fifty">50</string>
+    <string name="play">Play</string>
 
 </resources>
